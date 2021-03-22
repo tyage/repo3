@@ -8,6 +8,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Tag
         run: |
+          export INPUT_TAG_NAME=hoge
+          export GITHUB_REF=hoge
           env
       - name: Release
         uses: softprops/action-gh-release@master
