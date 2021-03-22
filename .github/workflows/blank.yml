@@ -14,3 +14,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           INPUT_TAG_NAME: hoge
+          GITHUB_REF: hoge
