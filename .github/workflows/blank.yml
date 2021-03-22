@@ -12,7 +12,7 @@ jobs:
           export GITHUB_REF=hoge
           env
       - name: Release
-        uses: softprops/action-gh-release@master
+        uses: tyage/action-gh-release@force-tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           INPUT_TAG_NAME: hoge
