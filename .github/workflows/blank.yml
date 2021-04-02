@@ -9,11 +9,10 @@ jobs:
 
       - name: Create local changes and commit
         run: |
-          git checkout main
           echo test > newfile
           git add newfile
           git config --local user.email "namatyage@gmail.com"
           git config --local user.name "tyage"
           git commit -m "Add changes" -a
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}
-          git push --force origin main
+          git push --force origin HEAD:refs/heads/main
